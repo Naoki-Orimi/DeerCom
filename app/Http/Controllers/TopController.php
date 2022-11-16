@@ -9,7 +9,6 @@ class TopController extends Controller
 {
     public function index(Request $request)
     {
-        // dd(Auth::user());
         return view('base');
     }
 }

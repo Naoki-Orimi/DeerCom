@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect('login');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
-Route::get('/top', 'TopController@index');
+Route::get('/top', 'TopController@index')->middleware('auth');

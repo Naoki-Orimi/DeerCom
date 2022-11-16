@@ -122,15 +122,12 @@
 
     </style>
 </head>
-
+<?php
+    $auth = Auth::user();
+?>
 <body>
-    {{-- bootstrapによるレスポンシブ対応を行う --}}
-    <div>
-        @include('layouts.header')
-    </div>
-
     <div id="app" class="contents">
-        {{-- ここをアクセスするURLによって動的にコンポーネントを変えられるようにしたい --}}
+        <header-component v-bind:auth="{{ $auth }}"></header-component>
         <main-component></main-component>
     </div>
     <!-- Js Plugins -->

@@ -340,6 +340,11 @@ ol {
 	border-bottom: 1px solid #e5e5e5;
 }
 
+.logout {
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .header-top .ht-left {
 	float: left;
 }
